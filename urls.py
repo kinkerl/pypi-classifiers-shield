@@ -11,7 +11,7 @@ urlpatterns = [
     
     url(r'^$', TemplateView.as_view(template_name='index.html')),
     url(r'^image/(?P<project_name>[\w-]+)/(?P<classifier>[\w-]+)', image_redirect),
-    url(r'^.*$', RedirectView.as_view(url='https://heise.de', permanent=False), name='index')
+#     url(r'^.*$', RedirectView.as_view(url='https://heise.de', permanent=False), name='index')
 ] + aldryn_addons.urls.patterns() + i18n_patterns(
     # add your own i18n patterns here
     *aldryn_addons.urls.i18n_patterns()  # MUST be the last entry!
